@@ -20,6 +20,8 @@ public class Main {
         for( SmartDevice device : devices){
             device.turnOn();
             System.out.println(device.getStringStatus());
+            device.turnOff();
+            System.out.println(device.getStringStatus());
             System.out.println();
 
 //            device.response("Turn on");
