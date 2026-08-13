@@ -25,3 +25,7 @@ logging:
   level:
     org.hibernate.SQL: DEBUG
     org.hibernate.orm.jdbc.bind: TRACE
+
+aws:
+  s3:
+    bucket: aws-s3-learning-demo
