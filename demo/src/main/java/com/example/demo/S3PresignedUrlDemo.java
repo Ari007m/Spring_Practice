@@ -10,15 +10,13 @@ import java.time.Duration;
 import java.net.URL;
 
 public class S3PresignedUrlDemo {
-    @Value("${aws.s3.bucket}")
-    private static String bucket;
     public static void main(String[] args) {
         try (S3Presigner presigner = S3Presigner.builder()
                 .region(Region.US_EAST_1) // change to your bucket's actual region
                 .build()) {
 
             GetObjectRequest getObjectRequest = GetObjectRequest.builder()
-                    .bucket(bucket)
+                    .bucket("aws-s3-learning-demo")
                     .key("dummy.txt")
                     .build();
 
